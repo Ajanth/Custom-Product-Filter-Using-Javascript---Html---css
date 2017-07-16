@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Isotope - combination filters with toggle buttons</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <script src="js/vendor/jquery-1.9.0.min.js" type="text/javascript">
+    </script>
+    <link href="style/jquery.nouislider.min.css" rel="stylesheet">
+    <link href="style/jquery-ui.css" rel="stylesheet">
+    <link href="style/global.css" rel="stylesheet">
+</head>
+<body>
+    <div class="wide-container all-bags-new">
+        <div class="grid-12 clearfix">
+            <h1><strong>Help me choose:</strong> The Best Carry On BackPack Contenders</h1>
+        </div>
+        <p style="margin-left: 40px !important;">Adjust the filters below to find your ideal garment bag (links to Amazon):</p>
+        <div class="grid-12 clearfix">
+            <div class="filters hide">
+                <div class="inner2">
+                    <div class="ui-group">
+                        <h4 class="quarter-top half-bottom">Category</h4>
+                        <div class="button-group js-radio-button-group" data-filter-group="category">
+                            <button class="button category-all is-checked" data-filter="">All</button>
+							<button class="button category-large" data-filter=".large">Large</button>
+							<button class="button category-medium" data-filter=".medium">Medium</button>
+							<button class="button category-small" data-filter=".small">Small</button>
+                        </div>
+                    </div>
+                    <div class="ui-group">
+                        <h4 class="quarter-top half-bottom">Material</h4>
+                        <div class="button-group js-radio-button-group" data-filter-group="material">
+                            <button class="button material-all is-checked" data-filter="">All</button>
+							<button class="button material-nylon" data-filter=".nylon">Nylon</button>
+							<button class="button material-polyester" data-filter=".polyester">Polyester</button>
+							<button class="button material-canvas" data-filter=".canvas">Canvas</button>
+							</div>
+                    </div>
+					
+					<div class="ui-group">
+                        <h4 class="quarter-top half-bottom">Side Handle</h4>
+                        <div class="button-group js-radio-button-group" data-filter-group="sideHandle">
+                            <button class="button sidehandle-all is-checked" data-filter="">All</button>
+							<button class="button sidehandle-yes" data-filter=".syes">Yes</button>
+							<button class="button sidehandle-no" data-filter=".sno">No</button>
+							</div>
+                    </div>
+                    <div class="ui-group">
+                        <h4 class="quarter-top half-bottom">Waist Strap</h4>
+                        <div class="button-group js-radio-button-group" data-filter-group="waistStrap">
+                            <button class="button waiststrap-all is-checked" data-filter="">All</button>
+                            <button class="button waiststrap-yes" data-filter=".wyes">Yes</button>
+                            <button class="button waiststrap-no" data-filter=".wno">No</button>
+                            </div>
+                    </div>
+                   
+                    <div class="ui-group one-left">
+                        <h4 class="quarter-top quarter-bottom">Price</h4>
+                        <div class="button-group" data-filter-group="price">
+                            <div class="slider-ctn quarter-top">
+                                <div class="pricetemp-slider price-slider ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all"
+                                data-filter=".bag-price">
+                                    <div class=
+                                    "ui-slider-range ui-widget-header ui-corner-all"
+                                    style="left: 0%; width: 100%;">
+                                    </div><span class=
+                                    "ui-slider-handle ui-state-default ui-corner-all"
+                                    style="left: 0%;" tabindex=
+                                    "0"></span><span class=
+                                    "ui-slider-handle ui-state-default ui-corner-all"
+                                    style="left: 100%;" tabindex="0"></span>
+                                </div>
+								<label class="visually-hidden" for=
+                                "price-amount"></label>
+                                <p class="no-margin float-left"><label class=
+                                "visually-hidden" for=
+                                "price-amount">Range:</label></p><input class=
+                                "visually-hidden" id="price-amount" readonly
+                                type="text">
+                                <ul class="show-price clearfix half-top">
+                                    <li class="grid-6 float-left nobottom">
+                                        <p class="no-margin inputNumber" id="price-low">$20</p>
+                                    </li>
+                                    <li class="grid-6 float-right nobottom">
+                                        <p class="no-margin text-align-right inputNumber" id="price-high">$159</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+					</br>
+					<div class="ui-group one-left">
+                        <h4 class="quarter-top quarter-bottom">Weight</h4>
+                        <div class="button-group" data-filter-group="weight" style="width:185px;">
+                            <div class="slider-ctn quarter-top">
+                                <div class="weight-slider price-slider ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all"
+                                data-filter=".bag-weight">
+                                    <div class=
+                                    "ui-slider-range ui-widget-header ui-corner-all"
+                                    style="left: 0%; width: 100%;">
+                                    </div><span class=
+                                    "ui-slider-handle ui-state-default ui-corner-all"
+                                    style="left: 0%;" tabindex=
+                                    "0"></span><span class=
+                                    "ui-slider-handle ui-state-default ui-corner-all"
+                                    style="left: 100%;" tabindex="0"></span>
+                                </div>
+								<label class="visually-hidden" for="weight-amount"></label>
+                                <p class="no-margin float-left"><label class=
+                                "visually-hidden" for=
+                                "weight-amount">Range:</label></p><input class=
+                                "visually-hidden" id="weight-amount" readonly
+                                type="text">
+                                <ul class="show-weight clearfix half-top">
+                                    <li class="grid-6 float-left nobottom">
+                                        <p class="no-margin inputNumber" id="weight-low">9.8</p>
+                                    </li>
+                                    <li class="grid-6 float-right nobottom">
+                                        <p class="no-margin text-align-right inputNumber" id="weight-high">15.74</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                     <div class="ui-group one-left">
+                        <h4 class="quarter-top quarter-bottom">Liters</h4>
+                        <div class="button-group" data-filter-group="liter" style="width:185px;">
+                            <div class="slider-ctn quarter-top">
+                                <div class="liter-slider price-slider ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all"
+                                data-filter=".bag-liter">
+                                    <div class=
+                                    "ui-slider-range ui-widget-header ui-corner-all"
+                                    style="left: 0%; width: 100%;">
+                                    </div><span class=
+                                    "ui-slider-handle ui-state-default ui-corner-all"
+                                    style="left: 0%;" tabindex=
+                                    "0"></span><span class=
+                                    "ui-slider-handle ui-state-default ui-corner-all"
+                                    style="left: 100%;" tabindex="0"></span>
+                                </div>
+                                <label class="visually-hidden" for=
+                                "liter-amount"></label>
+                                <p class="no-margin float-left"><label class=
+                                "visually-hidden" for=
+                                "liter-amount">Range:</label></p><input class=
+                                "visually-hidden" id="liter-amount" readonly
+                                type="text">
+                                <ul class="show-price clearfix half-top">
+                                    <li class="grid-6 float-left nobottom">
+                                        <p class="no-margin inputNumber" id="liter-low">2.65 inches</p>
+                                    </li>
+                                    <li class="grid-6 float-right nobottom">
+                                        <p class="no-margin text-align-right inputNumber" id="liter-high">22.0 inches</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+					
+					<div class="ui-group one-left">
+                        <h4 class="quarter-top quarter-bottom">Length</h4>
+                        <div class="button-group" data-filter-group="length" style="width:185px;">
+                            <div class="slider-ctn quarter-top">
+                                <div class="length-slider price-slider ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all"
+                                data-filter=".bag-length">
+                                    <div class=
+                                    "ui-slider-range ui-widget-header ui-corner-all"
+                                    style="left: 0%; width: 100%;">
+                                    </div><span class=
+                                    "ui-slider-handle ui-state-default ui-corner-all"
+                                    style="left: 0%;" tabindex=
+                                    "0"></span><span class=
+                                    "ui-slider-handle ui-state-default ui-corner-all"
+                                    style="left: 100%;" tabindex="0"></span>
+                                </div>
+								<label class="visually-hidden" for=
+                                "length-amount"></label>
+                                <p class="no-margin float-left"><label class=
+                                "visually-hidden" for=
+                                "length-amount">Range:</label></p><input class=
+                                "visually-hidden" id="length-amount" readonly
+                                type="text">
+                                <ul class="show-price clearfix half-top">
+                                    <li class="grid-6 float-left nobottom">
+                                        <p class="no-margin inputNumber" id="length-low">2.65 inches</p>
+                                    </li>
+                                    <li class="grid-6 float-right nobottom">
+                                        <p class="no-margin text-align-right inputNumber" id="length-high">22.0 inches</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                   
+					
+					<div class="ui-group one-left">
+                        <h4 class="quarter-top quarter-bottom">Width</h4>
+                        <div class="button-group" data-filter-group="width" style="width:185px;">
+                            <div class="slider-ctn quarter-top">
+                                <div class="width-slider price-slider ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all"
+                                data-filter=".bag-width">
+                                    <div class=
+                                    "ui-slider-range ui-widget-header ui-corner-all"
+                                    style="left: 0%; width: 100%;">
+                                    </div><span class=
+                                    "ui-slider-handle ui-state-default ui-corner-all"
+                                    style="left: 0%;" tabindex=
+                                    "0"></span><span class=
+                                    "ui-slider-handle ui-state-default ui-corner-all"
+                                    style="left: 100%;" tabindex="0"></span>
+                                </div>
+								<label class="visually-hidden" for=
+                                "width-amount"></label>
+                                <p class="no-margin float-left"><label class=
+                                "visually-hidden" for=
+                                "width-amount">Range:</label></p><input class=
+                                "visually-hidden" id="width-amount" readonly
+                                type="text">
+                                <ul class="show-price clearfix half-top">
+                                    <li class="grid-6 float-left nobottom">
+                                        <p class="no-margin inputNumber" id="width-low">$35</p>
+                                    </li>
+                                    <li class="grid-6 float-right nobottom">
+                                        <p class="no-margin text-align-right inputNumber" id="width-high">$695</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+					
+					<div class="ui-group one-left">
+                        <h4 class="quarter-top quarter-bottom">Depth</h4>
+                        <div class="button-group" data-filter-group="depth" style="width:185px;">
+                            <div class="slider-ctn quarter-top">
+                                <div class="depth-slider price-slider ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all"
+                                data-filter=".bag-depth">
+                                    <div class=
+                                    "ui-slider-range ui-widget-header ui-corner-all"
+                                    style="left: 0%; width: 100%;">
+                                    </div><span class=
+                                    "ui-slider-handle ui-state-default ui-corner-all"
+                                    style="left: 0%;" tabindex=
+                                    "0"></span><span class=
+                                    "ui-slider-handle ui-state-default ui-corner-all"
+                                    style="left: 100%;" tabindex="0"></span>
+                                </div>
+								<label class="visually-hidden" for=
+                                "depth-amount"></label>
+                                <p class="no-margin float-left"><label class=
+                                "visually-hidden" for=
+                                "depth-amount">Range:</label></p><input class=
+                                "visually-hidden" id="depth-amount" readonly
+                                type="text">
+                                <ul class="show-depth clearfix half-top">
+                                    <li class="grid-6 float-left nobottom">
+                                        <p class="no-margin inputNumber" id="depth-low">$35</p>
+                                    </li>
+                                    <li class="grid-6 float-right nobottom">
+                                        <p class="no-margin text-align-right inputNumber" id="depth-high">$695</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid" id="bags" style="position: relative; height: 479.218px; opacity: 1;">
+                <div class="bag medium nylon syes wyes OspreyFarpoint40"
+                style="position: absolute; left: 0px; top: 0px;">
+                    <a href="http://www.amazon.com/Osprey-Farpoint-Travel-Backpack-Volcanic/dp/B014EBM3KA?tag=coluggage-20"><img alt="Osprey Farpoint 40" src="http://carryonguy.com/wp-content/uploads/2016/04/51WeRk3OOXL.jpg" width="233">
+                    <div class="buttons">
+                        <div class="inner">
+                            <p class="no-margin bold">Osprey Farpoint 40</p>
+                        </div>
+                    </div></a>
+                </div>
+                 <div class="bag large canvas sno wno CabinMaxOxford"
+                style="position: absolute; left: 245px; top: 0px;">
+                    <a href="http://www.amazon.com/Cabin-Max-Oxford-50x40x20cm-Luggage/dp/B00NTKDYMO?tag=coluggage-20"><img alt="Cabin Max Oxford" src="http://carryonguy.com/wp-content/uploads/2016/04/51nsYIDyfiL-1.jpg" width="233">
+                    <div class="buttons">
+                        <div class="inner">
+                            <p class="no-margin bold">Cabin Max Oxford</p>
+                        </div>
+                    </div></a>
+                </div>
+                <div class=
+                "bag large nylon sno wno CabinMaxMetz"
+                style="position: absolute; left: 735px; top: 0px;">
+                    <a href="http://www.amazon.com/Cabin-Max-Backpack-Approved-Luggage/dp/B00IR2VEUS?tag=coluggage-20"><img alt="Cabin Max Metz"
+                    src=
+                    "http://carryonguy.com/wp-content/uploads/2016/04/41p05Vw3EbL-1.jpg" width="233">
+                    <div class="buttons">
+                        <div class="inner">
+                            <p class="no-margin bold">Cabin Max Metz</p>
+                        </div>
+                    </div></a>
+                </div>
+                <div class="bag large nylon syes wyes OspreyPorter46"
+                style="position: absolute; left: 490px; top: 0px;">
+                    <a href="http://www.amazon.com/Osprey-Porter-Travel-Backpack-46-Liter/dp/B00IMXQ8Z8?tag=coluggage-20"><img alt="Osprey Porter 46" src=
+                    "http://carryonguy.com/wp-content/uploads/2016/04/41q2Bk9lWbNL.jpg" width="233">
+                    <div class="buttons">
+                        <div class="inner">
+                            <p class="no-margin bold">Osprey Porter 46</p>
+                        </div>
+                    </div></a>
+                </div>
+                
+                <div class=
+                "bag large nylon syes wyes eBagsMotherLode"
+                style="position: absolute; left: 980px; top: 0px;">
+                    <a href="http://www.amazon.com/eBags-Mother-Weekender-Convertible-Solid/dp/B004XUYFS6?tag=coluggage-20"><img alt="eBags Mother Lode"
+                    src="http://carryonguy.com/wp-content/uploads/2016/04/51uW1gBTkFL.jpg" width="233">
+                    <div class="buttons">
+                        <div class="inner">
+                            <p class="no-margin bold">eBags Mother Lode</p>
+                        </div>
+                    </div></a>
+                </div>
+
+                <div class=
+                "bag medium nylon sno wno TopPower8006"
+                style="position: absolute; left: 0px; top: 159px;">
+                    <a href="http://www.amazon.com/Transformable-Convertible-Carry-Backpack-Compartment-Black/dp/B01A7XXX6C?tag=coluggage-20"><img alt="Top Power 8006"
+                    src=
+                    "http://carryonguy.com/wp-content/uploads/2016/04/51qCP32B0sWL.jpg" width="233">
+                    <div class="buttons">
+                        <div class="inner">
+                            <p class="no-margin bold">Top Power 8006</p>
+                        </div>
+                    </div></a>
+                </div>
+                <div class="bag medium polyester syes wno HynesEagle38l"
+                style="position: absolute; left: 245px; top: 159px;">
+                    <a href="http://www.amazon.com/Hynes-Eagle-Flight-Approved-Backpack/dp/B018G4I3IM?tag=coluggage-20"><img alt=
+                    "Hynes Eagle 38l" src=
+                    "http://carryonguy.com/wp-content/uploads/2016/04/41A5m0xs7OL.jpg" width="233">
+                    <div class="buttons">
+                        <div class="inner">
+                            <p class="no-margin bold">Hynes Eagle 38l</p>
+                        </div>
+                    </div></a>
+                </div>
+                <div class=
+                "bag medium canvas syes wyes CrazyAntsMilitary" style=
+                "position: absolute; left: 490px; top: 159px;">
+                    <a href="http://www.amazon.com/Military-Tactical-Backpack-Camping-Shoulder/dp/B011KZEQ4Y?tag=coluggage-20"><img alt="Crazy Ants Military"
+                    src=
+                    "http://carryonguy.com/wp-content/uploads/2016/04/41q2BwF0PnzL.jpg" width="233">
+                    <div class="buttons">
+                        <div class="inner">
+                            <p class="no-margin bold">Crazy Ants Military</p>
+                        </div>
+                    </div></a>
+                </div>
+                <div class="bag medium nylon sno wno Outlander"
+                style="position: absolute; left: 735px; top: 159px;">
+                    <a href="http://www.amazon.com/Outlander-Packable-Lightweight-Backpack-Daypack-Grey-L/dp/B014EMLJ6S?tag=coluggage-20"><img alt=
+                    "Outlander" src=
+                    "http://carryonguy.com/wp-content/uploads/2016/04/41cBSL9PTIL.jpg" width="233">
+                    <div class="buttons">
+                        <div class="inner">
+                            <p class="no-margin bold">Outlander</p>
+                        </div>
+                    </div></a>
+                </div>
+                <div class="bag small nylon syes wno Timbuk2Uptown"
+				style="position: absolute; left: 980px; top: 159px;">
+                    <a href="http://www.amazon.com/Timbuk2-Uptown-TSA-Friendly-Laptop-Backpack/dp/B00S75OYY8?tag=coluggage-20"><img alt="Timbuk2 Uptown"
+                    src=
+                    "http://carryonguy.com/wp-content/uploads/2016/04/51jXs535tRL.jpg" width="233">
+                    <div class="buttons">
+                        <div class="inner">
+                            <p class="no-margin bold">Timbuk2 Uptown</p>
+                        </div>
+                    </div></a>
+                </div>
+                <div class=
+                "bag small nylon sno wno OspreyDaylite" style=
+                "position: absolute; left: 0px; top: 318px;">
+                    <a href="http://www.amazon.com/Osprey-234900-550-Daylite-Backpack-Black/dp/B00AOGU7M6?tag=coluggage-20"><img alt="Osprey Daylite"
+                    src=
+                    "http://carryonguy.com/wp-content/uploads/2016/04/31rRshVi9GL-1.jpg" width="233">
+                    <div class="buttons">
+                        <div class="inner">
+                            <p class="no-margin bold">Osprey Daylite</p>
+                        </div>
+                    </div></a>
+                </div>
+                
+                
+            </div>
+        </div>
+        <script src="js/isotope.pkgd.min.js">
+        </script> 
+        <script src="js/vendor/jquery-ui.js">
+        </script> 
+        <script src="js/all-backpacks-new.js">
+        </script>
+    </div>
+    <script src="js/kci.min.js">
+    </script>
+</body>
+</html>
