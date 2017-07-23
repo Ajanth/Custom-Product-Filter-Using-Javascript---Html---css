@@ -1,6 +1,6 @@
 # Custom-Product-Filter-Using-Javascript---Html---css
 
-Reusable product catalog theme for price/attributes filter.
+Customizable product catalog theme with price/attributes filter.
 
 Use the source and extend it to suite your needs.
 
